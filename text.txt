@@ -1,0 +1,6 @@
+INFO: Program started
+DEBUG: Value x = 5
+ERROR: Failed to load config
+INFO: User logged in
+WARNING: Low memory
+ERROR: Disk not found
