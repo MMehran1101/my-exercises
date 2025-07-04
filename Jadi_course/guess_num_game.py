@@ -76,7 +76,7 @@ high_score_int = 0
 while isPlaying:
 
     count = 0
-    pc_answer = random.randint(n1, n2 + 1)
+    pc_answer = random.randint(n1, n2)
 
     while not win(pc_answer, guess):
         guess = get_a_guess()
