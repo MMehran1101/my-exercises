@@ -8,7 +8,9 @@ def welcome():
     G00D L0CK WITH THAT *_*
     Let's Play 🏃‍➡️
     ''')
-
+    res = input("Enter the game's numerical range. (ex : 1,20) : ")
+    n1 , n2 = map(int, res.split(','))
+    return n1, n2
 
 
 def win(pc, player_g):
@@ -16,16 +18,19 @@ def win(pc, player_g):
 
 
 def get_a_guess():
-    g = input("Guess a Number : ")
+    g = input(f"Guess a Number ({n1}, {n2}) : ")
     return int(g)
 
 
 def answer(pc, player_g):
-    if player_g > pc:
-        return "Try somthing smaller dude 😏"
-    elif player_g < pc:
-        return "Woof pick a larger num 🤨"
-    return "WoW YOU WON 🏆"
+    if player_g < n1 or player_g > n2:
+        return "Out of Range 💀"
+    else:
+        if player_g > pc:
+            return "Try somthing smaller dude 😏"
+        elif player_g < pc:
+            return "Woof pick a larger num 🤨"
+        return "WoW YOU WON 🏆"
 
 
 def high_score(player_count, high_s):
@@ -62,7 +67,7 @@ def play_again():
         return False
 
 
-welcome()
+n1, n2 = welcome()
 
 guess = 0
 isPlaying = True
@@ -71,7 +76,7 @@ high_score_int = 0
 while isPlaying:
 
     count = 0
-    pc_answer = random.randint(1, 20)
+    pc_answer = random.randint(n1, n2 + 1)
 
     while not win(pc_answer, guess):
         guess = get_a_guess()
