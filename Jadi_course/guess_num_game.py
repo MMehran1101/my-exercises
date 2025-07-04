@@ -3,11 +3,12 @@ import random
 
 def welcome():
     print('''
-    Welcome to my game.
+    Welcome to my 'GUESS NUM' GAME.
     This game is about guessing a number choose by computer (between 1 to 20).
     G00D L0CK WITH THAT *_*
-
+    Let's Play 🏃‍➡️
     ''')
+
 
 
 def win(pc, player_g):
@@ -36,7 +37,7 @@ def high_score(player_count, high_s):
     if player_count < high_s:
         print(f'''
         DAMN !!, You are HIT the top record.
-        The previous record is {high_s}
+        The previous record is {high_s} try.
         NOW you with {player_count} ON the top of all records🔥
         ''')
         return player_count
@@ -49,11 +50,11 @@ def high_score(player_count, high_s):
 
 
 def finish(player_g, try_count):
-    print(f"HELL YEAAA !!, The {player_g} is right and you came here with {try_count} try 😎")
+    print(f"\nThe {player_g} is right and you came here with {try_count} try 😎")
 
 
 def play_again():
-    res = input("Do You want to play again ? (Y/N) : ")
+    res = input("\nDo You want to play again ? (Y/N) : ")
     if res.upper() in ['Y', 'YES']:
         return True
     else:
