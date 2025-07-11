@@ -1,4 +1,5 @@
 import os
+import time
 
 from mylibrary.library import Library
 
@@ -28,6 +29,8 @@ def show_menu():
             a = input(f"'{t}' written by : ")
             library.add_book(t, a)
             print(f"\nThe '{t}' book writen by '{a}' successfully added\n")
+            time.sleep(1)
+
 
         elif choice == 2:
             clear_terminal()
@@ -36,9 +39,12 @@ def show_menu():
             clear_terminal()
             t = input("Enter book title : ")
             library.remove_book(t)
+            time.sleep(1)
+
 
         elif choice == 4:
             library.show_book()
+            time.sleep(1)
 
         elif choice == 5:
             print("Bye bye")
