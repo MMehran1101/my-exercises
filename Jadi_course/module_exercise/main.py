@@ -41,7 +41,7 @@ def show_menu():
             library.show_book()
 
         elif choice == 5:
-            print("Bye bye5")
+            print("Bye bye")
             exit()
         else:
             clear_terminal()
