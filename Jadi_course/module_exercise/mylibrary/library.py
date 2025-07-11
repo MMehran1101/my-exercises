@@ -6,7 +6,9 @@ class Library:
         self.books_data.append(new_book)
 
     def remove_book(self, title):
-        pass
+        for book in self.books_data:
+            if book['title'] == title:
+                self.books_data.remove(book)
 
     def search_book(self, title):
         pass

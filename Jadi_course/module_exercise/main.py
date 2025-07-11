@@ -31,8 +31,12 @@ def show_menu():
 
         elif choice == 2:
             clear_terminal()
+
         elif choice == 3:
             clear_terminal()
+            t = input("Enter book title : ")
+            library.remove_book(t)
+
         elif choice == 4:
             library.show_book()
 
